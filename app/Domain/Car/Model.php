@@ -71,18 +71,18 @@ class Model extends BaseModel
     {
         $query->with(['model', 'model.brand', 'engine']);
 
-        $coupeTypeId = defaultValue($filters, 'coupe_type_id', null);
-        if ($coupeTypeId !== null) {
+        $coupeTypeId = defaultValue($filters, 'coupe_type_id', 0);
+        if ($coupeTypeId > 0) {
             $query->where('coupe_type_id', '=', $coupeTypeId);
         }
 
-        $modelId = defaultValue($filters, 'model_id', null);
-        if ($modelId !== null) {
+        $modelId = defaultValue($filters, 'model_id', 0);
+        if ($modelId > 0) {
             $query->where('model_id', '=', $modelId);
         }
 
-        $engineId = defaultValue($filters, 'engine_id', null);
-        if ($engineId !== null) {
+        $engineId = defaultValue($filters, 'engine_id', 0);
+        if ($engineId > 0) {
             $query->where('engine_id', '=', $engineId);
         }
 

@@ -12,7 +12,7 @@
                     @include('shared.table.select', ['name' => 'brand_id', 'items' => $brands])
                 </div>
                 <div class="form-group">
-                    @include('shared.table.select', ['name' => 'model_id', 'items' => ['Select Model']])
+                    @include('shared.table.select', ['name' => 'model_id', 'items' => ['' => 'Select Model']])
                 </div>
                 <div class="form-group">
                     @include('shared.table.select', ['name' => 'engine_id', 'items' => $engines])
